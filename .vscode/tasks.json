@@ -1,0 +1,39 @@
+{
+// tasks.json 形式の詳細についての資料は、
+  // https://go.microsoft.com/fwlink/?LinkId=733558 をご覧ください
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cargo",
+      "subcommand": "build",
+      "problemMatcher": [
+        "$rustc"
+      ]
+    },
+    {
+      "label": "test",
+      "type": "shell",
+      "command": "./test"
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "cargo run",
+      "presentation": {
+          "panel": "dedicated",
+          "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "check",
+      "type": "shell",
+      "command": "cargo check",
+      "presentation": {
+          "panel": "dedicated",
+          "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
